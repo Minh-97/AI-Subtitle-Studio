@@ -1,49 +1,38 @@
-# Task 005 - Xây dựng module tiền xử lý âm thanh và video
+# Task 005 - Thiết lập quy trình tiền xử lý âm thanh và video
 
 ## Mục tiêu
-Chuẩn bị dữ liệu âm thanh và video trước khi đưa vào xử lý nhận dạng và tạo phụ đề, nhằm tăng chất lượng dữ liệu đầu vào và giảm lỗi do nhiễu, chất lượng âm thanh thấp hoặc định dạng không chuẩn.
+Đảm bảo dữ liệu âm thanh và video được chuẩn hóa trước khi vào giai đoạn nhận dạng và tạo phụ đề.
 
 ## Mô tả
-Task này bao gồm việc làm sạch, chuẩn hóa và tách dữ liệu từ file video sang âm thanh riêng. Trong quá trình này, hệ thống cần đánh giá chất lượng âm thanh, xử lý nhiễu nền, điều chỉnh mức âm lượng, đồng bộ thời gian và chuẩn bị các thành phần dữ liệu cần thiết cho các bước sau. Đây là một trong những bước quyết định đến chất lượng transcript và subtitle cuối cùng.
+Task này tập trung vào việc xác định quy trình tách âm thanh từ video, chuẩn hóa âm lượng, kiểm tra chất lượng, và lưu trữ bản dữ liệu tiền xử lý. Mục tiêu là làm tăng độ tin cậy của các bước tiếp theo.
 
 ## Input
-- File video hoặc âm thanh đầu vào
-- Metadata về thời lượng và định dạng file
-- Cấu hình chất lượng âm thanh mong muốn
+- PLAN.md
+- docs/architecture.md
+- docs/project_spec.md
 
 ## Output
-- File âm thanh đã tiền xử lý
-- Bản ghi metadata về quá trình tiền xử lý
-- File tạm hoặc file chuẩn hóa để dùng cho module nhận dạng
+- Quy trình tiền xử lý dữ liệu media
+- Quy tắc kiểm tra chất lượng âm thanh
+- Tài liệu về đầu ra trung gian cho module nhận dạng
+
+## API
+- Không áp dụng API trong task này.
+- Tập trung vào quy trình xử lý dữ liệu.
+
+## Test
+- Kiểm tra quy trình tiền xử lý có thể được mô tả đầy đủ.
+- Kiểm tra các trường hợp chất lượng âm thanh kém đã được dự phòng.
+- Kiểm tra đầu ra trung gian có thể dùng cho module tiếp theo.
 
 ## Điều kiện hoàn thành
-- Quá trình tách âm thanh từ video hoạt động đúng với dữ liệu mẫu
-- Amplitude và chất lượng âm thanh được chuẩn hóa theo quy tắc đã định
-- Hệ thống ghi nhận được dữ liệu đã được xử lý và thời gian thực hiện
-- Trường hợp file không đủ chất lượng phải có cảnh báo rõ ràng
-
-## Tiêu chuẩn QA
-- Kết quả đầu ra phải nhất quán với cấu hình đã chọn
-- Không làm thay đổi dữ liệu gốc khi không cần thiết
-- Quá trình tiền xử lý phải có log đầy đủ
-- File đầu ra phải dùng được trong bước nhận dạng tiếp theo
-
-## Test cần vượt qua
-- Với video có âm thanh rõ, hệ thống tạo được file âm thanh tách thành công
-- Với video có nhiễu, hệ thống có thể phát hiện và báo cảnh báo phù hợp
-- Với file đã được chuẩn hóa, module nhận dạng có thể tiếp tục xử lý mà không gặp lỗi cấu trúc
+- Quá trình tiền xử lý có cấu trúc rõ ràng và có thể kiểm chứng.
+- Các trường hợp dữ liệu kém chất lượng đã được xác định.
+- Dữ liệu đầu ra trung gian có thể được dùng ở bước tiếp theo.
 
 ## Checklist
-- [ ] Đã xác định quy trình tách âm thanh
-- [ ] Đã xác định quy trình chuẩn hóa âm thanh
-- [ ] Đã ghi nhận metadata tiền xử lý
-- [ ] Đã kiểm tra với dữ liệu nhiễu và dữ liệu sạch
-- [ ] Đã xác định cách xử lý khi chất lượng âm thanh quá thấp
-
-## Độ ưu tiên
-Cao
-
-## Module liên quan
-- Preprocessing
-- Audio Processing
-- Video Processing
+- [ ] Đã xác định các bước tiền xử lý.
+- [ ] Đã xác định quy tắc chuẩn hóa âm thanh.
+- [ ] Đã xác định cách lưu trữ dữ liệu trung gian.
+- [ ] Đã xác định các trường hợp cảnh báo hoặc dừng xử lý.
+- [ ] Đã lưu tài liệu quy trình tiền xử lý vào hệ thống.

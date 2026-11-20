@@ -1,49 +1,38 @@
-# Task 004 - Thiết kế và triển khai luồng nhập dữ liệu video và âm thanh
+# Task 004 - Thiết lập quy trình tiếp nhận và kiểm tra đầu vào
 
 ## Mục tiêu
-Xây dựng quy trình nhập dữ liệu video và âm thanh một cách có cấu trúc, có kiểm tra và có khả năng mở rộng cho nhiều định dạng đầu vào khác nhau.
+Đảm bảo dữ liệu đầu vào được tiếp nhận đúng cách, có kiểm tra đầy đủ và được lưu trữ theo chuẩn trước khi đi vào các bước xử lý tiếp theo.
 
 ## Mô tả
-Task này tập trung vào việc chuẩn hóa cách hệ thống tiếp nhận file đầu vào. Cần xác định các định dạng được hỗ trợ, cách kiểm tra tính hợp lệ của file, cách xử lý file bị hỏng, cách lưu trữ dữ liệu vào thư mục input hoặc temp, và cách ghi nhận thông tin đầu vào cho các bước tiếp theo. Đây là bước đầu tiên của toàn bộ pipeline và cần được thiết kế kỹ lưỡng để tránh lỗi lây lan vào các module sau.
+Task này tập trung vào việc mô tả và chuẩn hóa quy trình nhận file video và âm thanh từ người dùng, kiểm tra định dạng, kiểm tra độ hợp lệ và ghi nhận thông tin đầu vào. Đây là bước đầu tiên của toàn bộ pipeline và ảnh hưởng trực tiếp đến chất lượng xử lý sau này.
 
 ## Input
-- File video hoặc âm thanh từ người dùng
-- Metadata liên quan như tên file, kích thước, định dạng, thời lượng
-- Quy ước lưu trữ dữ liệu đầu vào
+- PLAN.md
+- docs/architecture.md
+- docs/project_spec.md
 
 ## Output
-- Bản ghi thông tin file đầu vào đã được kiểm tra
-- File được chuẩn hóa hoặc chuyển đổi về định dạng phù hợp
-- Kết quả lưu trong thư mục phục vụ cho các bước tiếp theo
+- Quy trình tiếp nhận đầu vào
+- Quy tắc kiểm tra file và metadata
+- Tài liệu lưu trữ và xử lý đầu vào
+
+## API
+- Không áp dụng API trong task này.
+- Tập trung vào quy trình đầu vào.
+
+## Test
+- Kiểm tra các loại đầu vào chính đã được xác định.
+- Kiểm tra quy trình kiểm tra file đã được mô tả đầy đủ.
+- Kiểm tra lỗi đầu vào được phân loại và ghi nhận rõ ràng.
 
 ## Điều kiện hoàn thành
-- Hệ thống có thể nhận ít nhất một loại đầu vào chính và xử lý đúng
-- File không hợp lệ được phát hiện và báo lỗi rõ ràng
-- Metadata của file được lưu trữ và truy xuất được
-- Quá trình nhập dữ liệu không làm hỏng file gốc
-
-## Tiêu chuẩn QA
-- Tất cả đầu vào phải có kiểm tra trước khi đi tiếp
-- Tên file và thông tin phải được ghi nhận đúng
-- Trường hợp lỗi phải có thông báo đủ chi tiết
-- Không được bỏ qua các trường hợp file không khớp định dạng
-
-## Test cần vượt qua
-- Upload một file hợp lệ và kiểm tra hệ thống nhận diện đúng
-- Upload một file sai định dạng để đảm bảo báo lỗi đúng
-- Upload một file lớn và kiểm tra việc lưu trữ và metadata vẫn đúng
+- Đầu vào đã được mô tả rõ ràng và có chuẩn kiểm tra.
+- Các trường hợp không hợp lệ đã được xác định.
+- Người phát triển có thể hiểu cách xử lý dữ liệu đầu vào mà không cần thêm hướng dẫn ngoài.
 
 ## Checklist
-- [ ] Đã xác định các định dạng đầu vào được hỗ trợ
-- [ ] Đã thiết kế quy trình kiểm tra file
-- [ ] Đã xác định cách lưu trữ file đầu vào
-- [ ] Đã xác định cách phản hồi khi file không hợp lệ
-- [ ] Đã kiểm tra luồng nhập với dữ liệu mẫu
-
-## Độ ưu tiên
-Cao
-
-## Module liên quan
-- Input Handling
-- File Validation
-- Storage Management
+- [ ] Đã xác định các loại đầu vào chính.
+- [ ] Đã mô tả quy trình nhận và kiểm tra file.
+- [ ] Đã xác định cách ghi nhận metadata.
+- [ ] Đã xác định cách xử lý đầu vào không hợp lệ.
+- [ ] Đã lưu tài liệu quy trình đầu vào vào hệ thống.

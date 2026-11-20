@@ -1,49 +1,39 @@
-# Task 002 - Thiết lập môi trường làm việc và quy trình phát triển
+# Task 002 - Thiết lập cấu hình môi trường và quy trình vận hành
 
 ## Mục tiêu
-Tạo nền tảng vận hành cho toàn bộ quá trình phát triển, đảm bảo môi trường làm việc có thể tái tạo được và phù hợp với quy tắc của dự án.
+Đảm bảo môi trường làm việc và quy trình vận hành có thể tái tạo được và phù hợp với định hướng phát triển của dự án.
 
 ## Mô tả
-Task này hướng tới việc chuẩn bị môi trường làm việc cho nhóm phát triển. Các công việc bao gồm xác định công cụ cần dùng, cấu hình môi trường Python hoặc hệ thống tương ứng, quản lý dependency, định nghĩa quy trình tạo môi trường mới, quy trình chạy thử và quy trình ghi log. Mục tiêu là giảm rủi ro khi chuyển môi trường và làm cho các thành viên có thể bắt đầu cùng một chuẩn.
+Task này tập trung vào việc định nghĩa cấu hình môi trường làm việc, quy trình cài đặt, quy trình chạy kiểm thử và quy trình ghi nhận trạng thái hoạt động. Nội dung là nền tảng cho việc triển khai các module sau này.
 
 ## Input
-- Yêu cầu công nghệ của dự án
-- Cấu trúc thư mục và tài liệu spec
-- Danh sách công cụ phát triển mong muốn
+- PLAN.md
+- docs/coding_rules.md
+- pyproject.toml
+- requirements.txt
 
 ## Output
-- Tài liệu và cấu hình môi trường phát triển
-- Danh sách dependency cơ bản
-- Quy trình khởi tạo môi trường mới cho người khác
+- Tài liệu và quy trình vận hành môi trường
+- Danh sách cấu hình cần thiết cho phát triển
+- Quy ước hoạt động cho môi trường làm việc
+
+## API
+- Không áp dụng API trong task này.
+- Tập trung vào cấu hình và quy trình.
+
+## Test
+- Kiểm tra tài liệu có mô tả đầy đủ cách thiết lập môi trường.
+- Kiểm tra quy trình vận hành có thể hiểu và áp dụng được.
+- Kiểm tra không bỏ sót các dependency cần thiết.
 
 ## Điều kiện hoàn thành
-- Môi trường có thể được thiết lập lại một cách nhất quán
-- Các dependency được ghi rõ và có thể cài đặt theo hướng dẫn
-- Người dùng mới có thể thực hiện khởi động môi trường mà không cần hỏi thêm
-- Quy trình làm việc được ghi chép cụ thể
-
-## Tiêu chuẩn QA
-- Hướng dẫn phải rõ, ngắn và có thể thực hiện được
-- Không dùng các bước tùy biến không giải thích
-- Tất cả dependency cần thiết phải được liệt kê đầy đủ
-- Tài liệu phải có thể kiểm tra bằng cách thực hiện trên môi trường mới
-
-## Test cần vượt qua
-- Một thành viên mới có thể cài đặt môi trường từ đầu và chạy thử thành công
-- Hệ thống không phụ thuộc vào file cục bộ không được ghi trong tài liệu
-- Môi trường có thể chạy ở máy khác với cấu hình tương đương
+- Môi trường phát triển có được mô tả rõ ràng.
+- Các bước hoạt động cơ bản đã được ghi lại.
+- Không còn thiếu thông tin để người mới bắt đầu.
 
 ## Checklist
-- [ ] Đã xác định công cụ cần dùng
-- [ ] Đã chuẩn hóa dependency
-- [ ] Đã viết hướng dẫn cài đặt môi trường
-- [ ] Đã kiểm tra khả năng tái tạo môi trường
-- [ ] Đã ghi rõ quy trình chạy thử cơ bản
-
-## Độ ưu tiên
-Cao
-
-## Module liên quan
-- Environment Setup
-- Configuration
-- Documentation
+- [ ] Đã xác định các thành phần môi trường cần thiết.
+- [ ] Đã xác định cấu hình và dependency.
+- [ ] Đã mô tả quy trình vận hành.
+- [ ] Đã ghi nhận các điều kiện bắt buộc.
+- [ ] Đã lưu tài liệu vào hệ thống.

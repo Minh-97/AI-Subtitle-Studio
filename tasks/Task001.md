@@ -1,49 +1,40 @@
-# Task 001 - Xác định phạm vi dự án và cấu trúc tài liệu
+# Task 001 - Thiết lập quy chuẩn tài liệu và phạm vi dự án
 
 ## Mục tiêu
-Hoàn thiện bản nền tảng tài liệu cho dự án, đảm bảo mọi thành viên đều hiểu phạm vi, mục tiêu, cấu trúc thư mục và quy tắc làm việc trước khi triển khai bất kỳ module nào.
+Thiết lập nền tảng tài liệu và phạm vi phát triển cho toàn bộ dự án, đảm bảo các bên liên quan có cùng hiểu biết về mục tiêu, chức năng cốt lõi và giới hạn của hệ thống.
 
 ## Mô tả
-Task này tập trung vào việc chuẩn hóa tài liệu nền tảng của dự án. Nội dung bao gồm xác định tên dự án, phạm vi phát triển, mục tiêu kinh doanh, giới hạn hệ thống, cấu trúc thư mục, quy ước viết tài liệu và các nguyên tắc vận hành chung. Đây là nền tảng để các task sau được phân chia rõ ràng và không phát sinh hiểu lệch.
+Task này tập trung vào việc hoàn thiện các tài liệu nền tảng của dự án, bao gồm phạm vi, mục tiêu, quy ước làm việc và cấu trúc module. Đây là bước đầu tiên để các task sau có thể triển khai theo một định hướng thống nhất.
 
 ## Input
-- Cấu trúc thư mục đã có trong repository
-- Tài liệu hiện có như architecture, roadmap, project_spec, coding_rules, qa_rules, terminology, translation_rules
-- Yêu cầu từ người quản lý dự án hoặc người yêu cầu sản phẩm
+- PLAN.md
+- docs/architecture.md
+- docs/roadmap.md
+- docs/project_spec.md
+- docs/terminology.md
 
 ## Output
-- Một bộ tài liệu nền tảng đầy đủ, nhất quán và có thể dùng làm chuẩn cho toàn bộ dự án
-- Bản mô tả phạm vi dự án và phạm vi không bao gồm
-- Danh sách các module cốt lõi và mối liên hệ giữa chúng
+- Bản tài liệu quy chuẩn dự án
+- Danh sách module và phạm vi phát triển ban đầu
+- Bản ghi về nguyên tắc làm việc chung
+
+## API
+- Không áp dụng API trong task này.
+- Tập trung vào tài liệu và quy chuẩn.
+
+## Test
+- Kiểm tra tài liệu có đầy đủ mục lục và nội dung cốt lõi.
+- Kiểm tra các thuật ngữ có thống nhất với terminology.
+- Kiểm tra không có mâu thuẫn giữa roadmap, architecture và spec.
 
 ## Điều kiện hoàn thành
-- Tài liệu đã được tổ chức theo cấu trúc rõ ràng với mục lục
-- Mỗi tài liệu có nội dung đầy đủ, không để trống phần quan trọng
-- Các thuật ngữ chính đã được thống nhất và ghi nhận
-- Không có mâu thuẫn giữa spec, roadmap và architecture
-
-## Tiêu chuẩn QA
-- Tài liệu phải dễ đọc với ngôn ngữ rõ ràng, không mơ hồ
-- Mọi thuật ngữ kỹ thuật phải được giải thích hoặc tham chiếu tới terminology
-- Nội dung phải phù hợp với trạng thái hiện tại của dự án
-- Không được để lại phần nội dung chung quá sơ sài
-
-## Test cần vượt qua
-- Đọc tài liệu đầu tiên, người mới vào dự án có thể hiểu được mục tiêu và cấu trúc dự án
-- Người kiểm tra có thể xác định được module nào là cốt lõi và module nào đang chưa được xác định
-- Không phát sinh câu hỏi lại về phạm vi dự án sau khi đọc tài liệu
+- Tài liệu đã có cấu trúc rõ ràng, dễ đọc và có thể dùng làm chuẩn.
+- Tất cả module chính đã được liệt kê và mô tả.
+- Không còn thiếu nội dung cốt lõi cho việc bắt đầu phát triển.
 
 ## Checklist
-- [ ] Đã xác định phạm vi dự án
-- [ ] Đã chuẩn hóa mục tiêu và giới hạn hệ thống
-- [ ] Đã hoàn thiện cấu trúc tài liệu
-- [ ] Đã thống nhất thuật ngữ chính
-- [ ] Đã kiểm tra tính nhất quán giữa các tài liệu
-
-## Độ ưu tiên
-Cao
-
-## Module liên quan
-- Documentation
-- Project Governance
-- Architecture
+- [ ] Đã đọc và tổng hợp tài liệu nền tảng.
+- [ ] Đã xác định phạm vi dự án.
+- [ ] Đã xác định module cốt lõi.
+- [ ] Đã xác định quy chuẩn và nguyên tắc làm việc.
+- [ ] Đã lưu tài liệu vào hệ thống.

@@ -1,0 +1,9 @@
+Python
+
+↓
+
+PyInstaller
+
+↓
+
+Windows EXE

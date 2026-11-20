@@ -3,3 +3,6 @@ name = "ai-subtitle-studio"
 version = "0.1.0"
 description = "AI Subtitle Studio project scaffold"
 requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

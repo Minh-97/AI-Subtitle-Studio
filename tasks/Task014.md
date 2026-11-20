@@ -1,49 +1,38 @@
-# Task 014 - Xây dựng cơ chế xử lý lỗi và cảnh báo hệ thống
+# Task 014 - Thiết lập quy trình xử lý lỗi và cảnh báo
 
 ## Mục tiêu
-Thiết lập một quy trình xử lý lỗi rõ ràng để hệ thống có thể phát hiện, báo cáo và phản ứng đúng khi gặp sự cố.
+Đảm bảo các lỗi trong quá trình xử lý có thể được nhận diện, ghi nhận và phản hồi rõ ràng.
 
 ## Mô tả
-Task này tập trung vào việc xác định các loại lỗi có thể xảy ra trong pipeline, cách phân loại chúng, thông báo cho người dùng hoặc vận hành, và cách lưu lại tình trạng lỗi để xử lý tiếp. Cần có quy tắc cho lỗi đầu vào, lỗi xử lý, lỗi định dạng, lỗi đa ngôn ngữ, lỗi kết nối hoặc lỗi thiếu dữ liệu. Đây là bước cần thiết để hệ thống có thể vận hành ổn định trong thực tế.
+Task này tập trung vào việc xác định các loại lỗi có thể xảy ra trong pipeline, cách phân loại lỗi, cách ghi nhận và cách phản hồi cho người vận hành. Mục tiêu là giúp hệ thống vận hành ổn định hơn và giảm rủi ro mất dữ liệu hoặc bỏ sót tình huống cần xử lý.
 
 ## Input
-- Danh sách các tình huống lỗi có thể xảy ra
-- Quy định về cảnh báo và mức độ nghiêm trọng
-- Cấu trúc logging và trạng thái công việc
+- PLAN.md
+- docs/architecture.md
+- docs/qa_rules.md
 
 ## Output
-- Cơ chế xử lý lỗi có cấu trúc
-- Các loại cảnh báo và thông điệp phản hồi
-- Bản ghi lỗi và hướng xử lý tiếp
+- Quy trình xử lý lỗi và cảnh báo
+- Danh sách loại lỗi chính và mức độ cảnh báo
+- Tài liệu hướng xử lý lỗi cho nhóm phát triển
+
+## API
+- Không áp dụng API trong task này.
+- Tập trung vào quy trình xử lý sự cố.
+
+## Test
+- Kiểm tra các loại lỗi chính đã được liệt kê đầy đủ.
+- Kiểm tra cách phản hồi lỗi có thể hiểu và theo dõi được.
+- Kiểm tra lỗi được ghi nhận đúng trong log.
 
 ## Điều kiện hoàn thành
-- Mỗi lỗi chính đều có cách xử lý rõ ràng
-- Hệ thống báo được lỗi đúng loại và đúng mức độ
-- Người dùng hiểu được vấn đề và hướng tiếp theo
-- Lỗi không làm mất toàn bộ quá trình mà chỉ dừng hoặc báo ở bước liên quan
-
-## Tiêu chuẩn QA
-- Thông báo lỗi phải rõ ràng và không gây hiểu nhầm
-- Không để lỗi không được ghi nhận
-- Hệ thống không nên chết đột ngột mà phải có fallback phù hợp
-- Mỗi lỗi phải có trạng thái được lưu lại
-
-## Test cần vượt qua
-- Giả lập lỗi đầu vào không hợp lệ và kiểm tra thông điệp
-- Giả lập lỗi xử lý trung gian và kiểm tra hệ thống không làm mất dữ liệu gốc
-- Giả lập lỗi định dạng đầu ra và kiểm tra phản hồi đúng
+- Các lỗi chính có quy tắc xử lý rõ ràng.
+- Người vận hành có thể hiểu cách phản hồi khi gặp sự cố.
+- Tài liệu xử lý lỗi có thể dùng làm tham chiếu cho phát triển tiếp theo.
 
 ## Checklist
-- [ ] Đã liệt kê các loại lỗi chính
-- [ ] Đã thiết kế cách phân loại và mức độ cảnh báo
-- [ ] Đã định nghĩa cách ghi nhận lỗi
-- [ ] Đã kiểm tra phản hồi với các tình huống lỗi mẫu
-- [ ] Đã lưu hướng xử lý tiếp cho từng lỗi
-
-## Độ ưu tiên
-Cao
-
-## Module liên quan
-- Error Handling
-- Fault Tolerance
-- Logging
+- [ ] Đã liệt kê các loại lỗi chính.
+- [ ] Đã xác định mức độ cảnh báo.
+- [ ] Đã xác định cách ghi nhận và xử lý lỗi.
+- [ ] Đã kiểm tra tính nhất quán với QA rules.
+- [ ] Đã lưu tài liệu vào hệ thống.

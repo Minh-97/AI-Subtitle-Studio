@@ -1,49 +1,38 @@
-# Task 003 - Xây dựng sơ đồ cấu hình hệ thống và quản lý tham số
+# Task 003 - Thiết lập quản lý cấu hình và tham số hệ thống
 
 ## Mục tiêu
-Tạo một cơ chế quản lý cấu hình thống nhất để hệ thống có thể vận hành linh hoạt, dễ bảo trì và không phụ thuộc vào giá trị cứng trong mã nguồn.
+Đảm bảo các tham số cốt lõi của hệ thống được quản lý một cách thống nhất, dễ bảo trì và dễ thay đổi theo từng giai đoạn phát triển.
 
 ## Mô tả
-Task này tập trung vào việc phân loại và lưu trữ các tham số quan trọng như đường dẫn đầu vào, đường dẫn đầu ra, cấu hình mô hình, ngôn ngữ mục tiêu, cài đặt thời gian phụ đề và các tùy chọn xử lý. Mục tiêu là tách lý do cấu hình khỏi logic nghiệp vụ để dễ chỉnh sửa và dễ kiểm thử.
+Task này tập trung vào việc định nghĩa cấu hình hệ thống như đường dẫn dữ liệu, tham số xử lý, cấu hình ngôn ngữ, điều chỉnh thời gian phụ đề và các tùy chọn vận hành. Mục đích là tách cấu hình khỏi logic xử lý và chuẩn hóa cách sử dụng các giá trị cài đặt.
 
 ## Input
-- Danh sách tham số cần dùng cho toàn bộ luồng xử lý
-- Yêu cầu về logging, output, temp và model configuration
-- Quy ước đặt tên và lưu trữ cấu hình
+- PLAN.md
+- docs/architecture.md
+- docs/project_spec.md
 
 ## Output
-- Cấu trúc thư mục config rõ ràng
-- Tập tin cấu hình mẫu và tài liệu sử dụng
-- Quy ước quản lý tham số trong toàn bộ dự án
+- Danh sách tham số hệ thống chính
+- Quy ước quản lý cấu hình
+- Tài liệu cấu hình cho nhóm phát triển
+
+## API
+- Không áp dụng API trong task này.
+- Tập trung vào cấu trúc cấu hình.
+
+## Test
+- Kiểm tra tất cả tham số quan trọng đều được liệt kê.
+- Kiểm tra cấu hình có thể được hiểu và cập nhật dễ dàng.
+- Kiểm tra không có giá trị cứng quan trọng bị bỏ sót.
 
 ## Điều kiện hoàn thành
-- Tất cả tham số hệ thống quan trọng đều được định nghĩa ở một nơi thống nhất
-- Không có giá trị cứng quan trọng bị nhúng trực tiếp trong logic nghiệp vụ
-- Cấu hình có thể được thay đổi mà không làm ảnh hưởng đến toàn bộ codebase
-- Tài liệu mô tả cách cập nhật cấu hình cho người vận hành
-
-## Tiêu chuẩn QA
-- Cấu hình phải có giá trị mặc định rõ ràng
-- Cấu hình phải được ghi nhận và kiểm tra khi thay đổi
-- Không để cấu hình thiếu trường bắt buộc
-- Tên tham số phải có ý nghĩa và nhất quán
-
-## Test cần vượt qua
-- Thay đổi một tham số như đường dẫn đầu ra sẽ ảnh hưởng đúng theo mong đợi
-- Hệ thống vẫn hoạt động đúng khi dùng cấu hình mẫu
-- Người mới có thể mở cấu hình và hiểu được ý nghĩa của từng trường
+- Cấu hình hệ thống có thể được quản lý ở một nơi thống nhất.
+- Các tham số chính đã được xác định và ghi nhận rõ ràng.
+- Người mới có thể hiểu và chỉnh sửa cấu hình mà không cần giải thích thêm.
 
 ## Checklist
-- [ ] Đã liệt kê toàn bộ tham số cốt lõi
-- [ ] Đã xác định nơi lưu cấu hình
-- [ ] Đã tạo mẫu cấu hình
-- [ ] Đã kiểm tra tính đúng đắn của cấu hình mặc định
-- [ ] Đã ghi chú cách sử dụng và cập nhật
-
-## Độ ưu tiên
-Cao
-
-## Module liên quan
-- Configuration
-- Infrastructure
-- Logging
+- [ ] Đã xác định các tham số cốt lõi.
+- [ ] Đã xác định nơi lưu trữ cấu hình.
+- [ ] Đã mô tả cách dùng và cập nhật cấu hình.
+- [ ] Đã kiểm tra tính nhất quán của cấu hình.
+- [ ] Đã lưu tài liệu cấu hình vào hệ thống.

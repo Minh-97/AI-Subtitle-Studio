@@ -1,49 +1,38 @@
-# Task 011 - Xây dựng module đồng bộ phụ đề với thời gian video
+# Task 011 - Thiết lập quy trình đồng bộ phụ đề với thời gian video
 
 ## Mục tiêu
-Đảm bảo các đoạn phụ đề xuất hiện đúng thời điểm và rời khỏi màn hình đúng lúc, tạo cảm giác đồng bộ với lời nói và chuyển động hình ảnh.
+Đảm bảo phụ đề có thể được đồng bộ với lời nói và thời gian phát của video một cách nhất quán.
 
 ## Mô tả
-Task này tập trung vào việc căn thời gian cho từng đoạn phụ đề sao cho phù hợp với nội dung lời nói và nhịp độ phát âm. Cần thiết kế quy tắc đánh dấu thời gian bắt đầu và kết thúc, cách xử lý chênh lệch nhỏ, cách điều chỉnh khi lời nói rõ ràng hoặc ngắt quãng, và cách kiểm tra độ trôi chảy của toàn bộ phụ đề. Đây là một nhiệm vụ phức tạp vì nó ảnh hưởng trực tiếp đến trải nghiệm người xem.
+Task này tập trung vào việc xác định quy tắc gắn thời gian bắt đầu và kết thúc cho mỗi đoạn phụ đề, cũng như cách xử lý chênh lệch nhỏ và các trường hợp lời nói ngắt quãng. Mục tiêu là tạo ra trải nghiệm xem mượt mà và phù hợp.
 
 ## Input
-- Các đoạn phụ đề đã được định dạng
-- Thời gian nói của từng đoạn từ transcript
-- Cấu hình căn chỉnh thời gian và độ trễ cho phép
+- PLAN.md
+- docs/architecture.md
+- docs/translation_rules.md
 
 ## Output
-- Các đoạn phụ đề có thời gian bắt đầu và kết thúc hợp lý
-- Bản ghi điều chỉnh thời gian
-- Bản đánh giá độ đồng bộ giữa lời nói và phụ đề
+- Quy trình đồng bộ thời gian phụ đề
+- Quy tắc gắn thời điểm bắt đầu và kết thúc
+- Tài liệu về độ đồng bộ giữa lời nói và phụ đề
+
+## API
+- Không áp dụng API trong task này.
+- Tập trung vào quy trình căn thời gian.
+
+## Test
+- Kiểm tra quy tắc gắn thời gian đã được mô tả đầy đủ.
+- Kiểm tra trường hợp chênh lệch nhỏ và ngắt lời đã được dự phòng.
+- Kiểm tra đầu ra có thể dùng cho export và render.
 
 ## Điều kiện hoàn thành
-- Phụ đề xuất hiện và biến mất đúng thời điểm với lời nói
-- Không có hiện tượng lệch quá lớn so với nội dung âm thanh
-- Quá trình căn thời gian có thể được xem xét lại nếu cần
-- Kết quả có thể dùng cho render và xuất bản
-
-## Tiêu chuẩn QA
-- Đồng bộ thời gian phải phù hợp với lời nói tự nhiên
-- Không được để phụ đề xuất hiện quá sớm hoặc quá muộn đáng kể
-- Thời gian của từng đoạn phải nhất quán theo toàn bộ video
-- Cần có cơ chế phản hồi khi độ lệch vượt ngưỡng cho phép
-
-## Test cần vượt qua
-- Một đoạn lời nói ngắn phải có phụ đề xuất hiện đúng lúc
-- Một đoạn lời nói dài phải có thời gian hiển thị đủ cho người xem đọc
-- Một chỗ ngắt câu hoặc ngắt lời phải được xử lý đúng cách
+- Phụ đề có thể được đồng bộ theo quy trình rõ ràng.
+- Các trường hợp lệch thời gian đã được xác định và xử lý.
+- Người review có thể đánh giá độ đồng bộ dựa trên tài liệu này.
 
 ## Checklist
-- [ ] Đã xác định quy tắc đồng bộ thời gian
-- [ ] Đã thiết kế cách chỉnh lại thời gian khi cần
-- [ ] Đã kiểm tra với nhiều kiểu nhịp lời nói
-- [ ] Đã lưu kết quả căn thời gian để dùng tiếp
-- [ ] Đã đánh giá mức độ đồng bộ trước khi xuất
-
-## Độ ưu tiên
-Cao
-
-## Module liên quan
-- Timing Alignment
-- Subtitle Synchronization
-- Audio Analysis
+- [ ] Đã xác định quy tắc đồng bộ thời gian.
+- [ ] Đã xác định cách xử lý chênh lệch nhỏ.
+- [ ] Đã xác định cách xử lý ngắt lời và nhịp phát âm.
+- [ ] Đã kiểm tra tính nhất quán với architecture.
+- [ ] Đã lưu tài liệu quy trình vào hệ thống.

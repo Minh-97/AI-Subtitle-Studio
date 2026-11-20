@@ -1,49 +1,38 @@
-# Task 010 - Thiết kế module định dạng phụ đề theo thời gian và không gian hiển thị
+# Task 010 - Thiết lập quy trình định dạng phụ đề
 
 ## Mục tiêu
-Tạo ra các đoạn phụ đề có cấu trúc hợp lý, dễ đọc và đúng thời điểm xuất hiện trên video.
+Đảm bảo phụ đề được cấu trúc hợp lý, dễ đọc và phù hợp với thời gian hiển thị trên video.
 
 ## Mô tả
-Task này tập trung vào việc chuyển nội dung từ transcript hoặc bản dịch thành các đoạn phụ đề có thời gian bắt đầu, kết thúc, độ dài phù hợp và cấu trúc hiển thị rõ ràng. Cần xác định quy tắc chia câu, ngắt dòng, giới hạn số từ trên mỗi dòng, tác động tới tốc độ đọc và mức độ phù hợp với video. Đây là bước quan trọng để phụ đề vừa đúng nghĩa vừa dễ đọc trong thời gian ngắn.
+Task này tập trung vào việc xác định quy tắc chia câu, ngắt dòng, giới hạn lượng chữ mỗi dòng, và cấu trúc hiển thị của phụ đề. Mục tiêu là tạo ra sản phẩm phụ đề có thể đọc nhanh và phù hợp với nhịp lời nói.
 
 ## Input
-- Bản transcript hoặc bản dịch đã được chỉnh sửa
-- Thông tin thời gian lời nói
-- Quy tắc định dạng phụ đề và độ dài hiển thị
+- PLAN.md
+- docs/translation_rules.md
+- docs/architecture.md
 
 ## Output
-- Các đoạn phụ đề có thời gian và nội dung sắp xếp hợp lý
-- Định dạng chuẩn cho từng phụ đề
-- Metadata về việc phân đoạn và hiển thị
+- Quy trình định dạng phụ đề
+- Quy tắc chia đoạn và ngắt dòng
+- Tài liệu về cấu trúc hiển thị phụ đề
+
+## API
+- Không áp dụng API trong task này.
+- Tập trung vào quy trình định dạng.
+
+## Test
+- Kiểm tra quy tắc chia đoạn và ngắt dòng đã được quy định rõ.
+- Kiểm tra phụ đề có thể được cấu trúc theo các tiêu chuẩn nhất quán.
+- Kiểm tra thông tin đầu ra có thể dùng cho module tiếp theo.
 
 ## Điều kiện hoàn thành
-- Phụ đề được chia thành các đoạn phù hợp với nội dung và thời gian
-- Không có quá nhiều chữ trên một dòng hoặc một khung thời gian
-- Có thể xuất ra định dạng chuẩn cho các bước tiếp theo
-- Các đoạn phụ đề có thể được xem lại và sửa nếu cần
-
-## Tiêu chuẩn QA
-- Nội dung phụ đề nên dễ đọc và không bị chồng chữ
-- Thời gian hiển thị phải phản ánh đúng tốc độ lời nói
-- Không dùng cấu trúc gây khó nhìn trên màn hình
-- Cần duy trì thống nhất giữa các đoạn
-
-## Test cần vượt qua
-- Một câu dài phải được chia thành các dòng hoặc đoạn phù hợp
-- Một câu ngắn phải được giữ gọn, tránh lặp lại không cần thiết
-- Phụ đề xuất hiện đúng thời điểm và không kéo dài quá mức
+- Phụ đề có thể được định dạng theo cấu trúc rõ ràng.
+- Các quy tắc đọc nhanh và thời gian hiển thị đã được ghi nhận.
+- Người review có thể dùng tài liệu này để kiểm tra kết quả.
 
 ## Checklist
-- [ ] Đã xác định quy tắc chia câu và ngắt dòng
-- [ ] Đã xác định giới hạn độ dài hiển thị
-- [ ] Đã thiết kế cách gắn thời gian bắt đầu và kết thúc
-- [ ] Đã kiểm tra với dữ liệu mẫu nhiều kiểu nội dung
-- [ ] Đã lưu kết quả định dạng để dùng tiếp
-
-## Độ ưu tiên
-Cao
-
-## Module liên quan
-- Subtitle Formatting
-- Timing Alignment
-- Presentation Layer
+- [ ] Đã xác định quy tắc chia đoạn.
+- [ ] Đã xác định quy tắc ngắt dòng.
+- [ ] Đã xác định quy tắc giới hạn số chữ mỗi dòng.
+- [ ] Đã kiểm tra tính nhất quán với translation rules.
+- [ ] Đã lưu tài liệu quy trình vào hệ thống.

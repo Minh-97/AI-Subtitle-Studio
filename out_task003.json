@@ -1,0 +1,19 @@
+{
+  "is_valid": false,
+  "missing_files": [],
+  "missing_sections": [
+    "PROJECT_SPEC.md: ## Mục lục",
+    "PROJECT_SPEC.md: ## 1. Tổng quan",
+    "PROJECT_SPEC.md: ## 3. Các thành phần chính",
+    "PROJECT_SPEC.md: ## 7. Checklist"
+  ],
+  "errors": [],
+  "parameters": [
+    "input_dir",
+    "output_dir",
+    "temp_dir",
+    "subtitle_duration_seconds",
+    "language",
+    "log_level"
+  ]
+}

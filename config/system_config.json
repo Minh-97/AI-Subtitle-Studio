@@ -1,0 +1,8 @@
+{
+  "input_dir": "input",
+  "output_dir": "output",
+  "temp_dir": "temp",
+  "subtitle_duration_seconds": 4,
+  "language": "vi",
+  "log_level": "INFO"
+}
